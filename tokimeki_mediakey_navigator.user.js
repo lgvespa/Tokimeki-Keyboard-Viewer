@@ -2,7 +2,7 @@
 // @name         Tokimeki Media Key Navaigator
 // @namespace    http://tampermonkey.net/
 // @version      2024-10-24
-// @description  TOKIMEKI‚Ì‰æ‘œ‰{——ƒy[ƒW‚É–îˆóƒL[‚É‚æ‚é‘JˆÚ‹@”\‚ğ’Ç‰Á(‰æ‘œ•\¦ˆê——‚Ì•\¦‚Ì‚İ)
+// @description  TOKIMEKIã®ç”»åƒé–²è¦§ãƒšãƒ¼ã‚¸ã«çŸ¢å°ã‚­ãƒ¼ã«ã‚ˆã‚‹é·ç§»æ©Ÿèƒ½ã‚’è¿½åŠ (ç”»åƒè¡¨ç¤ºä¸€è¦§ã®è¡¨ç¤ºæ™‚ã®ã¿)
 // @author       @heavy8.bsky.social
 // @match        https://tokimeki.blue/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tokimeki.blue
@@ -10,16 +10,16 @@
 // ==/UserScript==
 
 (function() {
-    // Œ»İ‚ÌƒƒfƒBƒAƒAƒCƒeƒ€‚ÌƒCƒ“ƒfƒbƒNƒX‚ğ’ÇÕ
+    // ç¾åœ¨ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã‚¢ã‚¤ãƒ†ãƒ ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’è¿½è·¡
     let currentIndex = null;
 
     document.addEventListener('click', function(event) {
         const currentImg = event.target;
 
         // console.log(currentImg);
-        // ƒNƒŠƒbƒN‘ÎÛ‚ª‰æ‘œƒTƒ€ƒlƒCƒ‹‚Å‚ ‚é‚±‚Æ‚ğŠm”F
+        // ã‚¯ãƒªãƒƒã‚¯å¯¾è±¡ãŒç”»åƒã‚µãƒ ãƒã‚¤ãƒ«ã§ã‚ã‚‹ã“ã¨ã‚’ç¢ºèª
         if (currentImg.classList.contains('media-thumbnail__image')) {
-            // .media-item‚ªƒNƒŠƒbƒN‚³‚ê‚½‚Æ‚«‚ÉŒ»İ‚ÌƒCƒ“ƒfƒbƒNƒX‚ğXV
+            // .media-itemãŒã‚¯ãƒªãƒƒã‚¯ã•ã‚ŒãŸã¨ãã«ç¾åœ¨ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã‚’æ›´æ–°
             const mediaItems = Array.from(document.querySelectorAll('.media-item'));
             const currentMediaItem = currentImg.parentNode.parentNode.parentNode;
             currentIndex = mediaItems.indexOf(currentMediaItem);
@@ -37,11 +37,11 @@
         const closeButton = contentWrap ? contentWrap.querySelector('.media-content-close') : null;
 
         if (event.key === 'ArrowUp' && currentIndex > 0) {
-            // ã–îˆóƒL[‚ª‰Ÿ‚³‚ê‚½ê‡A‘O‚ÌƒƒfƒBƒAƒAƒCƒeƒ€‚ÉˆÚ“®
+            // ä¸ŠçŸ¢å°ã‚­ãƒ¼ãŒæŠ¼ã•ã‚ŒãŸå ´åˆã€å‰ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã‚¢ã‚¤ãƒ†ãƒ ã«ç§»å‹•
             event.preventDefault();
             currentIndex--;
         } else if (event.key === 'ArrowDown' && currentIndex < mediaItems.length - 1) {
-            // ‰º–îˆóƒL[‚ª‰Ÿ‚³‚ê‚½ê‡AŸ‚ÌƒƒfƒBƒAƒAƒCƒeƒ€‚ÉˆÚ“®
+            // ä¸‹çŸ¢å°ã‚­ãƒ¼ãŒæŠ¼ã•ã‚ŒãŸå ´åˆã€æ¬¡ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã‚¢ã‚¤ãƒ†ãƒ ã«ç§»å‹•
             event.preventDefault();
             currentIndex++;
         } else if (event.key === 'ArrowLeft') {
@@ -60,12 +60,10 @@
 
         // console.log(`currentIndex: ${currentIndex}`);
         if (closeButton) {
-            // .media-content-close‚ğƒNƒŠƒbƒN‚µ‚Ä•Â‚¶‚é
+            // .media-content-closeã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦é–‰ã˜ã‚‹
             closeButton.click();
-            // ‘JˆÚæ‚Ì.media-item‚ğƒNƒŠƒbƒN‚µ‚ÄŠJ‚­
-            setTimeout(() => {
-                mediaItems[currentIndex].querySelector('img').click();
-            }, 300); // ƒAƒjƒ[ƒVƒ‡ƒ“‚â‘JˆÚ‚Ì’x‰„‚É‘Î‰‚·‚é‚½‚ß‚Ì‘Ò‹@ŠÔ
+            // é·ç§»å…ˆã®.media-itemã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦é–‹ã
+            mediaItems[currentIndex].querySelector('img').click();
         }
     });
 })();
