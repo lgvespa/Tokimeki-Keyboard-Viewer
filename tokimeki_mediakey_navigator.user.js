@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tokimeki Media Key Navaigator
 // @namespace    http://tampermonkey.net/
-// @version      2024-10-24
+// @version      v0.0.2
 // @description  TOKIMEKIの画像閲覧ページに矢印キーによる遷移機能を追加(画像表示一覧の表示時のみ)
 // @author       @heavy8.bsky.social
 // @match        https://tokimeki.blue/*
