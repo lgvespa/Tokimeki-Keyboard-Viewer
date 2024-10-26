@@ -1,4 +1,4 @@
-# Tokimeki KeyViewer
+# Tokimeki Keyboard Viewer
 
 TOKIMEKIでカラムスタイルを**メディアのみ**にしたとき、拡大画像表示画面において矢印キーでの操作を可能にするスクリプト。
 
@@ -15,7 +15,7 @@ TOKIMEKIでカラムスタイルを**メディアのみ**にしたとき、拡�
 
 ## インストール手順
 
-このガイドでは、TamperMonkeyを利用して **Tokimeki KeyViewer** をインストールし、キー操作でメディアを操作する方法を説明します。
+このガイドでは、TamperMonkeyを利用して **Tokimeki Keyboard Viewer** をインストールし、キー操作でメディアを操作する方法を説明します。
 
 ---
 
@@ -36,10 +36,10 @@ TOKIMEKIでカラムスタイルを**メディアのみ**にしたとき、拡�
 ---
 
 ### 2. スクリプトをインストール
-以下のリンクをクリックし、**Tokimeki KeyViewer** スクリプトをインストールします。  
+以下のリンクをクリックし、**Tokimeki Keyboard Viewer** スクリプトをインストールします。  
 TamperMonkeyのインストールが完了していれば、スクリプトのページが開かれ、「インストール」ボタンが表示されます。
 
-🔗 **[Tokimeki KeyViewer スクリプト](https://github.com/lgvespa/Tokimeki-Media-Key-Navaigator/raw/refs/heads/main/tokimeki_mediakey_navigator.user.js)**
+🔗 **[Tokimeki Keyboard Viewer スクリプト](https://github.com/lgvespa/Tokimeki-Media-Key-Navaigator/raw/refs/heads/main/tokimeki_mediakey_navigator.user.js)**
 
 ---
 
@@ -66,4 +66,4 @@ _図2: キー操作が可能な画面_
 ---
 
 ## おわりに
-この手順で **Tokimeki KeyViewer** を利用する準備が整いました。何か問題がある場合は、[GitHubのサポートページ](https://github.com/lgvespa/Tokimeki-Media-Key-Navaigator)をご確認ください。
+この手順で **Tokimeki Keyboard Viewer** を利用する準備が整いました。何か問題がある場合は、[GitHubのサポートページ](https://github.com/lgvespa/Tokimeki-Media-Key-Navaigator)をご確認ください。
