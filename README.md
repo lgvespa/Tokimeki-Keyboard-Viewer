@@ -26,7 +26,7 @@ TOKIMEKIでカラムスタイルを**メディアのみ**にしたとき、拡�
 以下のリンクをクリックし、**Tokimeki Keyboard Viewer** スクリプトをインストールします。  
 TamperMonkeyのインストールが完了していれば、スクリプトのページが開かれ、「インストール」ボタンが表示されます。
 
-🔗 **[Tokimeki Keyboard Viewer スクリプト](https://github.com/lgvespa/Tokimeki-Media-Key-Navaigator/raw/refs/heads/main/tokimeki_mediakey_navigator.user.js)**
+🔗 **[Tokimeki Keyboard Viewer スクリプト](https://github.com/lgvespa/Tokimeki-Keyboard-Viewer/raw/refs/heads/main/tokimeki_keyboard_viewer.user.js)**
 
 ---
 
