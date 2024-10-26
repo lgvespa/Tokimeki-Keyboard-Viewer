@@ -12,12 +12,16 @@ TOKIMEKIでカラムスタイルを**メディアのみ**にしたとき、拡�
 - Space / Nキー :いいね
 
 ## 使い方
+### 1. TamperMonkeyをインストール
 
-メディア一覧表示状態にした時に
+- Firefox : https://addons.mozilla.org/ja/firefox/addon/tampermonkey/
+- Chrome : https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=ja
+
+
+### 2. メディア一覧表示状態にする
 
 ![mediaonly](https://github.com/user-attachments/assets/e0039952-d74f-458a-a0a4-092c93a03a95)
 
 
-この画面で操作できるようになる
-![image](https://github.com/user-attachments/assets/79e0ff27-8840-4782-a5d3-8a1aa1c921f8)
-
+### 3. 適当な画像をクリックすると、この画面でキー操作ができるようになる
+![image](https://github.com/user-attachments/assets/29af3c0c-e3a9-4b09-b6ce-273181da405f)
