@@ -34,9 +34,10 @@
         }
     }
 
+
+
     document.addEventListener('click', function(event) {
         const currentImg = event.target;
-
         // console.log(currentImg);
         // クリック対象が画像サムネイルであることを確認
         if (currentImg.classList.contains('media-thumbnail__image')) {
@@ -69,22 +70,24 @@
             event.preventDefault();
             currentIndex++;
         } else if (event.key === 'ArrowLeft' || event.key === 'h') {
+            // 同ポストの前画像を表示
             event.preventDefault();
             clickSelector(contentWrap, '.splide__arrow--prev');
             return;
         } else if (event.key === 'ArrowRight' || event.key === 'l') {
+            // 同ポストの次画像を表示
             event.preventDefault();
             clickSelector(contentWrap, '.splide__arrow--next');
             return;
         } else if (event.key === 'r') {
+            // リポスト
             event.preventDefault();
             clickSelector(contentWrap, '.timeline-reaction__item--repost');
-            currentIndex++;
             return;
         } else if (event.key === 'f' || event.key === ' ') {
+            // いいね
             event.preventDefault();
             clickSelector(contentWrap, '.timeline-reaction__item--like');
-            currentIndex++;
             return;
         } else {
             return;
