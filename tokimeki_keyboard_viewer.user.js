@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Tokimeki Media Key Navaigator
+// @name         Tokimeki Keyboard Viewer
 // @namespace    http://tampermonkey.net/
-// @version      0.0.3
+// @version      0.0.4
 // @description  TOKIMEKIの画像閲覧ページに矢印キーによる遷移機能を追加(画像表示一覧の表示時のみ)
 // @author       lgvspa
 // @match        https://tokimeki.blue/*
