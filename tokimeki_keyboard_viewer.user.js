@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tokimeki Keyboard Viewer
 // @namespace    http://tampermonkey.net/
-// @version      0.0.5
+// @version      0.0.6
 // @description  TOKIMEKIの画像閲覧ページに矢印キーによる遷移機能を追加(画像表示一覧の表示時のみ)
 // @author       @heavy8.bsky.social
 // @match        https://tokimeki.blue/*
@@ -38,10 +38,12 @@
 
 
     function elementDisabled(query, value){
+        const element = document.querySelector(query);
+        if (!element) return;
         if (value){
-            document.querySelector(query).setAttribute('disabled', 'true');
+            element.setAttribute('disabled', 'true');
         }else{
-            document.querySelector(query).removeAttribute('disabled');
+            element.removeAttribute('disabled');
         }
     }
 
@@ -69,7 +71,6 @@
 
 
     document.addEventListener('keydown', function(event) {
-        console.log(event);
         // メディアビューアダイアログ(仮称)
         const contentWrap = document.querySelector('.media-content-wrap');
         if (contentWrap === null) return;
@@ -133,7 +134,8 @@
         // ダイアログを閉じたあと次の画像を表示
         if (closeButton) {
             closeButton.click();
-            mediaItems[currentIndex].querySelector('img').click();
+            // 閉じる時のアニメーションを考慮
+            setTimeout(()=>mediaItems[currentIndex].querySelector('img').click() , 200);
         }
     });
 })();
